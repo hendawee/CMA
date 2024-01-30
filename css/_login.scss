@@ -1,0 +1,126 @@
+.login {
+  @include flex-box(
+    $display: flex,
+    $flex-direction: row,
+    $justify-content: center,
+    $align-items: center
+  );
+  height: 100vh;
+  overflow: hidden; 
+  position: relative;
+  background: linear-gradient(
+      86deg,
+      rgba(0, 75, 150, 0.75) 56.47%,
+      rgba(94, 179, 228, 0.75) 146.7%
+    ),
+    url(/images/img/login-bg.png), lightgray 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: $lg) {
+    flex-direction: column;
+  }
+
+  .login-section {
+    display: flex;
+    width: 460px;
+    padding: 50px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: #f5f5f5;
+    position: relative;
+    z-index: 1;
+    .frm-header {
+      img {
+        display: block;
+        margin: 0 auto 25px;
+      }
+    }
+    .lang-switch {
+      position: fixed;
+      top: 5%;
+      inset-inline-end: 5%;
+      cursor: pointer;
+      z-index: 9;
+      border-radius: 5px;
+      color: #FFF;
+      font-size: 16px;
+      border: 1px solid #fff;
+      padding: 15px 30px;
+    }
+    .login-form {
+      .password-txt{
+        position: relative;
+        .ic-pass{
+          position: absolute;
+          top: 15px;
+          inset-inline-end: 5%;
+          i{
+            font-size: 20px;
+            color: #c8c9c7;
+          }
+        }
+      }
+      .form-control{
+        border-radius: 5px;
+        border: 1px solid #BDBDBD;
+        background: #FAFDF6;
+        height: 50px;
+        color: #404040;
+        font-size: 16px;
+      }
+      .form-check {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        .form-check-input {
+          border-radius: 3px;
+          width: 24px;
+          height: 24px;
+          flex-shrink: 0;
+      }
+      
+      label{
+        color: #2D2A32;
+        font-size: 16px;
+        margin-inline-start: 10px;
+        .rtl & {
+          margin-inline-start: 35px;
+        }
+    }
+      
+    }
+    .btn-frm-submit {
+      border-radius: 5px;
+      background: #004B96;
+      width: 100%;
+      height: 60px;
+      color: #FFF;
+      text-align: center;
+      font-size: 18px;
+  }
+  .forgot-check {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #BDBDBD;
+    text-align: center;
+    color: #004B96;
+    font-size: 16px;
+}
+    }
+   
+
+  }
+  &::after{
+    content: "";
+    width: 100%;
+    height:100%;
+    position: absolute;
+    z-index: 0;
+    top: 9px;
+    background:url(/images/img/logo-vector.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}

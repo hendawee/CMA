@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Login</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="images/img/favicon.ico" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/all.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="login">
+         <div class="login-section">
+            <!-- Language switcher button -->
+           <div class="lang-switch" onclick="toggleLanguage()" data-lang="digital-business-lang">عربي <i class="fa fa-globe" id="togglePassword"></i> </div>
+             <!-- Login contents -->
+            <div class="login-contents">
+                        <div class="frm-header">
+                           <img src="images/img/logo-icon.svg" alt="">
+                           <img src="images/img/login-ic.svg" alt="">
+                        </div>
+                        <!-- Login form -->
+                        <form class="login-form mt-4" method="link" action="index.html">
+                            <div class="mb-3 username-txt">
+                                <input type="text" class="form-control" id="login-username" placeholder="username" data-lang="username-or-email">
+                            </div>
+                            <div class="mb-3 password-txt">
+                                <input type="password" class="form-control" id="login-password" placeholder="Password" data-lang="password" >
+                                <div class="ic-pass">
+                                    <span onclick="togglePasswordVisibility()">
+                                        <i class="fa fa-eye" id="togglePassword"></i>
+                                    </span>
+                                    </div>
+                            </div>
+                            <div class="mb-2 form-check">
+                                <input type="checkbox" class="form-check-input" id="remember-me">
+                                <label class="form-check-label" for="remember-me" data-lang="remember-me">Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-frm-submit" data-lang="login">Login</button>
+                            <div class="mb-2 forgot-check">
+                                <a href="#" class="link-secondary"><strong data-lang="forgot-password">Forgot password</strong></a>
+                            </div>
+                        </form>       
+                       
+            </div> 
+       </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="js/bootstrap.min.js"></script>
+  
+    <!-- Core theme JS-->    
+    <script src="js/languages.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>

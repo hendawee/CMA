@@ -1,0 +1,79 @@
+//Table Style
+.table-responsive {
+  overflow-x: auto;
+
+  .cases-table {
+    width: 100%;
+    border-collapse: collapse;
+    tr {
+      &:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+    th,
+    td {
+      padding: 8px;
+      border-bottom: 1px solid var(--site_bg);
+      color: var(--grey);
+      &.status-open {
+        color: var(--green);
+      }
+      &.status-closed {
+        color: var(--red);
+      }
+    }
+
+    thead {
+      th {
+        background-color: var(--site_bg);
+        color: var(--black);
+      }
+    }
+  }
+}
+
+// Pageing Style
+
+.paging {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  ul.pagination {
+    gap: 5px;
+    li.page-item {
+      span.page-link {
+        border: none;
+        box-shadow: none;
+        background: var(--secondary) !important;
+        color: #fff;
+      }
+      .page-link {
+        color: var(--grey);
+        background: rgba(150, 149, 153, 0.24);
+        border-radius: 12px;
+        padding: 5px 15px 7px;
+        &:hover {
+          color: var(--grey) !important;
+          background: rgba(150, 149, 153, 0.5);
+        }
+      }
+      &.active {
+        .page-link {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+// Breadcrump Style
+
+ol.breadcrumb li:before {
+  .rtl & {
+    float: right !important;
+    padding-left: var(--bs-breadcrumb-item-padding-x);
+  }
+}

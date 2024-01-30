@@ -1,0 +1,421 @@
+// Section First Row
+section.first-section {
+  align-items: center;
+  @media (max-width: $xxl) {
+    flex-direction: column;
+  }
+  > div {
+    @media (max-width: $xxl) { 
+      width: 100%; 
+    }  
+    &.col-9 {
+      .row {
+        @media (max-width: $xl) {
+          flex-direction: column;
+        }
+        > div {
+          @media (max-width: $xl) {
+            width: 100%;
+          }
+        }
+      } 
+    }
+  }
+  .welcome {
+    position: relative;
+    text-align: start;
+    @media (max-width: $lg) { 
+      margin-bottom: 30px;
+    }
+    > span {
+      @include default-text($font-regular, 22px, 150%, var(--primary));
+      display: block;
+      margin-bottom: 10px;
+    }
+    h3 {
+      @include default-text($font-regular, 36px, 150%, var(--black));
+      p {
+        @include default-text($font-regular, 32px, 150%, var(--grey));
+      }
+    }
+  }
+
+  .services-sammary {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      @include flex-box(
+        $display: flex,
+        $justify-content: space-between,
+        $align-items: center
+      );
+      flex-wrap: wrap;
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        a {
+          @include flex-box(
+            $display: flex,
+            $flex-direction: column,
+            $justify-content: center,
+            $align-items: center
+          );
+          background: var(--white);
+          box-shadow: var(--box-shadow);
+          border-radius: var(--border-radius);
+          padding: 24px 5px;
+          transition: all 0.2s linear 0s;
+          width: 100%;
+          height: 100%;
+          margin: 10px;
+          svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+          }
+          span {
+            @include default-text($font-regular, 22px, 150%, var(--black));
+          }
+          p {
+            @include default-text($font-regular, 18px, 150%, var(--grey));
+            margin: 10px 0px;
+            text-align: center;
+          }
+          &:hover {
+            background: var(--primary);
+
+            svg {
+              path {
+                fill: var(--white);
+              }
+            }
+            span {
+              color: var(--white);
+            }
+            p {
+              color: var(--white-half);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.favorite-box,
+.quick-links-box {
+  border-radius: var(--border-radius);
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  @include flex-box(
+    $display: flex,
+    $flex-direction: column,
+    $align-items: flex-start
+  );
+  padding: 20px 24px;
+  gap: 25px;
+  .commonTitle {
+    @include default-text($font-regular, 22px, 150%, var(--black));
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 190px;
+    overflow-y: hidden;
+    padding-right: 10px;
+    position: relative;
+
+    li {
+      margin-bottom: 10px;
+      a {
+        border-radius: 12px;
+        background: var(--site_bg);
+        padding: 15px 18px;
+        @include flex-box($display: flex, $align-items: center);
+        gap: 10px;
+        color: var(--grey);
+        @include default-text($font-regular, 16px, 150%, var(--grey));
+        &:hover {
+          color: var(--white);
+          background: var(--primary);
+        }
+      }
+    }
+  }
+  &:hover {
+    ul {
+      overflow-y: scroll;
+    }
+  }
+}
+
+.second-section {
+  margin-top: 48px;
+  .title-with-action {
+    @include flex-box(
+      $display: flex,
+      $justify-content: space-between,
+      $align-items: center
+    );
+    margin-bottom: 15px;
+    @media (max-width: $xl) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h3 {
+      @include default-text($font-regular, 16px, 150%, var(--black));
+    }
+    .actionBtn {
+      @include flex-box(
+        $display: flex,
+        $justify-content: space-between,
+        $align-items: center
+      );
+      background: var(--white);
+      padding: 10px;
+      border-radius: 30px;
+      gap: 20px;
+      box-shadow: var(--box-shadow);
+      .add {
+        a {
+          @include default-text($font-regular, 14px, 150%, var(--grey));
+          display: block;
+          svg {
+            margin: 0 5px;
+          }
+          &:hover {
+            color: var(--secondary);
+            svg {
+              path {
+                fill: var(--secondary);
+              }
+            }
+          }
+        }
+      }
+      .current {
+        a {
+          border-radius: 100px;
+          background: var(--secondary);
+          box-shadow: var(--box-shadow);
+          @include flex-box($display: inline-flex, $align-items: flex-start);
+          padding: 8px 23px;
+          @include default-text($font-regular, 16px, 150%, var(--white));
+          &:hover {
+            color: var(--grey);
+            background: var(--light-grey);
+          }
+        }
+      }
+    }
+  }
+  .services-box {
+    .accordion {
+      .accordion-item {
+        margin-bottom: 10px;
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(122, 122, 122, 0.2);
+        background: var(--white);
+        .accordion-header {
+          .accordion-button {
+            background: none;
+            outline: none !important;
+            border: 0 !important;
+            padding-inline-start: 60px;
+            padding-inline-end: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            justify-content: space-between;
+            @media (max-width: $lg) {
+              flex-direction: column;
+              justify-content: start;
+              align-items: start;
+            }
+            > span {
+              @include default-text($font-regular, 22px, 150%, var(--black));
+            }
+
+            .serv-summary {
+              @include flex-box(
+                $display: flex,
+                $justify-content: center,
+                $align-items: center
+              );
+              gap: 2em;
+              @media (max-width: $lg) {
+                @include flex-box(
+                  $flex-direction: column,
+                  $justify-content: start,
+                  $align-items: start
+                );
+                width: 100%;
+                margin-top: 30px;
+                gap: 0;
+              }
+              a {
+                @include flex-box(
+                  $display: flex,
+                  $justify-content: space-between,
+                  $align-items: center
+                );
+                gap: 0.3rem;
+                @media (max-width: $lg) {
+                  width: 100%;
+                  border-bottom: 1px dashed var(--light-grey);
+                  padding-bottom: 10px;
+                  margin-bottom: 10px;
+                  gap: 0;
+                }
+                &:last-child {
+                  border-bottom: 0;
+                }
+                div {
+                  @include flex-box(
+                    $display: flex,
+                    $justify-content: center,
+                    $align-items: center
+                  );
+                  gap: 5px;
+                  svg {
+                    width: 24px;
+                    height: 24px;
+                    path {
+                      fill: var(--black-half);
+                    }
+                  }
+                  span {
+                    @include default-text(
+                      $font-regular,
+                      18px,
+                      150%,
+                      var(--black)
+                    );
+                  }
+                }
+                p {
+                  @include default-text($font-regular, 16px, 150%, var(--grey));
+                  margin: 0;
+                  @media (max-width: $lg) {
+                    color: var(--black);
+                  }
+                }
+              }
+            }
+            &:focus {
+              border: 0px !important;
+              outline: none !important;
+              box-shadow: none !important;
+            }
+            &:after {
+              content: none;
+            }
+            &:before {
+              content: "";
+              border-radius: 25px;
+              background: rgba(0, 112, 185, 0.05)
+                url(../images/ic-siderbar-arrow.svg) no-repeat;
+              width: 34px;
+              height: 34px;
+              inset-inline-start: 14px;
+              position: absolute;
+              background-position: center center;
+              .rtl & {
+                transform: rotate(180deg);
+              }
+            }
+
+            &[aria-expanded="true"] {
+              .serv-summary {
+                a {
+                  div {
+                    svg {
+                      path {
+                        fill: var(--primary);
+                      }
+                    }
+                    span {
+                      color: var(--primary);
+                    }
+                  }
+                }
+              }
+              &:before {
+                background: var(--secondary)
+                  url(../images/ic-active-accordion.svg) no-repeat;
+                background-position: center center;
+              }
+            }
+          }
+        }
+        .accordion-body {
+          .section-title-with-action {
+            @include flex-box(
+              $display: flex,
+              $justify-content: space-between,
+              $align-items: center
+            );
+            margin-bottom: 15px;
+            @media (max-width: $lg) {
+              @include flex-box($flex-direction: column, $align-items: start);
+            }
+
+            h3 {
+              @include default-text($font-regular, 20px, 21px, var(--black));
+            }
+            .tool-action {
+              @include flex-box(
+                $display: flex,
+                $justify-content: space-between,
+                $align-items: center
+              );
+              gap: 5px;
+
+              .add {
+                a {
+                  border-radius: 22px;
+                  background: var(--secondary);
+                  color: var(--white);
+                  display: block;
+                  padding-inline-start: 0;
+                  padding-inline-end: 25px;
+                  padding-top: 2px;
+                  padding-bottom: 2px;
+
+                  opacity: 0.8;
+                  &:hover {
+                    opacity: 1;
+                  }
+                  svg {
+                    margin-inline-end: 10px;
+                    path {
+                      fill: var(--white);
+                    }
+                  }
+                }
+              }
+              .all {
+                a {
+                  border-radius: 22px;
+                  background: var(--primary);
+                  color: var(--white);
+                  display: block;
+                  padding: 7px 25px 8px;
+                  text-align: center;
+                  opacity: 0.8;
+                  &:hover { 
+                    opacity: 1;
+                  }
+                } 
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
