@@ -51,6 +51,7 @@
   --white-half: rgba(255, 255, 255, 0.5);
   --box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
   --border: #E6E6E6;
+  --bg: #F5F5F5;
   --green: #0BB783;
   --red: #B00020;
   --orange: #FFC400;
@@ -122,6 +123,83 @@ body {
   text-align: right;
 }
 
+header.header > .container {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+header.header > .container .logo-wrap a {
+  display: block;
+}
+header.header > .container .logo-wrap a img {
+  height: 48px;
+}
+header.header > .container .action-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+header.header > .container .action-wrapper .search-wrap {
+  position: relative;
+}
+header.header > .container .action-wrapper .search-wrap .search-input {
+  display: flex;
+  padding: 10px 15px;
+  border-radius: 99px;
+  background: var(--bg);
+  min-width: 300px;
+  color: var(--color_lighter);
+  font-size: 16px;
+  line-height: 18px;
+  height: 44px;
+  border: none;
+}
+header.header > .container .action-wrapper .search-wrap button {
+  position: absolute;
+  top: 9px;
+  inset-inline-end: 10px;
+  outline: none;
+  border: 0;
+  background: transparent;
+}
+header.header > .container .action-wrapper .search-wrap button img {
+  width: 24px;
+  height: 24px;
+}
+header.header > .container .action-wrapper nav.top-navbar ul.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+header.header > .container .action-wrapper nav.top-navbar ul.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+header.header > .container .action-wrapper nav.top-navbar ul.navbar-nav .nav-item.language {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  background: #F5F5F5;
+  color: #004A98;
+  text-align: center;
+  font-size: 26px;
+  line-height: 22px;
+}
+header.header > .container .action-wrapper nav.top-navbar ul.navbar-nav .nav-item.requests {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  background: #F5F5F5;
+  color: #004A98;
+  text-align: center;
+  font-size: 26px;
+  line-height: 22px;
+}
+
 .login {
   display: flex;
   justify-content: center;
@@ -130,7 +208,7 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(86deg, rgba(0, 75, 150, 0.75) 56.47%, rgba(94, 179, 228, 0.75) 146.7%), url(/images/img/login-bg.png), lightgray 50%;
+  background: linear-gradient(86deg, rgba(0, 75, 150, 0.75) 56.47%, rgba(94, 179, 228, 0.75) 146.7%), url(../images/img/login-bg.png), lightgray 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -154,17 +232,20 @@ body {
   display: block;
   margin: 0 auto 25px;
 }
-.login .login-section .lang-switch {
+.login .login-section .switcher {
   position: fixed;
   top: 5%;
   inset-inline-end: 5%;
   cursor: pointer;
   z-index: 9;
   border-radius: 5px;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   border: 1px solid #fff;
   padding: 15px 30px;
+}
+.login .login-section .switcher .lang-switch {
+  margin: 0 5px;
 }
 .login .login-section .login-form .password-txt {
   position: relative;
@@ -180,8 +261,8 @@ body {
 }
 .login .login-section .login-form .form-control {
   border-radius: 5px;
-  border: 1px solid #BDBDBD;
-  background: #FAFDF6;
+  border: 1px solid #bdbdbd;
+  background: #fafdf6;
   height: 50px;
   color: #404040;
   font-size: 16px;
@@ -198,7 +279,7 @@ body {
   flex-shrink: 0;
 }
 .login .login-section .login-form .form-check label {
-  color: #2D2A32;
+  color: #2d2a32;
   font-size: 16px;
   margin-inline-start: 10px;
 }
@@ -207,19 +288,19 @@ body {
 }
 .login .login-section .login-form .btn-frm-submit {
   border-radius: 5px;
-  background: #004B96;
+  background: #004b96;
   width: 100%;
   height: 60px;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 18px;
 }
 .login .login-section .login-form .forgot-check {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #BDBDBD;
+  border-top: 1px solid #bdbdbd;
   text-align: center;
-  color: #004B96;
+  color: #004b96;
   font-size: 16px;
 }
 .login::after {
@@ -229,7 +310,7 @@ body {
   position: absolute;
   z-index: 0;
   top: 9px;
-  background: url(/images/img/logo-vector.png);
+  background: url(../images/img/logo-vector.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
