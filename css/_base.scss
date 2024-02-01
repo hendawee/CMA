@@ -78,14 +78,22 @@ a {
   background: var(--white);
   color: var(--primary);
 }
-
+*:focus{
+  box-shadow:none !important;
+}
 body {
   font-family: $font-regular;
   color: var(--text_color);
   background-color: var(--white);
   line-height: 150%;
 }
-
+a,button{
+  transition-duration: 0.3s !important;
+}
+.container{
+  max-width: 1440px;
+  width: 100%;
+}
 /* LTR specific styles */
 .ltr {
   direction: ltr;
