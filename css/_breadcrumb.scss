@@ -1,0 +1,28 @@
+
+div.breadcrumb {
+    background: #f5f5f5;
+    .title {
+        font-size: 20px;
+        font-family: $font-medium;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    li.breadcrumb-item {
+        i {
+            margin: 0 5px;
+        }
+        a {
+            color: #909090;
+            font-size: 16px;
+            font-family: $font-medium;
+        }
+        &.active{
+            a {
+                color: #004a98;
+            }
+        }
+    } 
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: var(--bs-breadcrumb-divider, ">") !important;
+    }
+}

@@ -3,6 +3,12 @@ header.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: $lg) {
+      flex-direction: column;
+      padding: 15px;
+      padding-bottom: 0;
+    }
+
     .logo-wrap {
       a {
         display: block;
@@ -10,14 +16,34 @@ header.header {
           height: 48px;
         }
       }
+      @media (max-width: $md) {
+        flex: 0 0 auto;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #f5f5f5;
+        padding-bottom: 20px;
+      }
     }
     .action-wrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 25px;
+      @media (max-width: $md) {
+        flex-direction: column;
+        gap: 0px;
+        padding-top: 15px;
+        width: 100%;
+      }
       .search-wrap {
         position: relative;
+        @media (max-width: $md) {
+          flex: 0 0 auto;
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid #f5f5f5;
+          padding-bottom: 20px;
+        }
         .search-input {
           display: flex;
           padding: 10px 15px;
@@ -187,6 +213,9 @@ header.header {
             line-height: 24px;
             padding: 13px 30px;
             display: block;
+            @media (max-width: $xl) {
+              font-size: 16px;
+            }
             &.active {
               background: rgba(255, 255, 255, 0.15);
             }
@@ -200,7 +229,7 @@ header.header {
             padding: 0;
             background: #004a98;
             margin-top: 0px;
-            border-top: 1px solid rgba(13,110,253,.25);
+            border-top: 1px solid rgba(13, 110, 253, 0.25);
             li {
               a {
                 color: #fff;

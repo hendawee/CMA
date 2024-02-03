@@ -1,23 +1,24 @@
 // Site Colors
 :root {
-  --primary: #004A98;
-  --secondary: #5EB3E4;
+  --primary: #004a98;
+  --secondary: #5eb3e4;
   --text_color: #404040;
   --color_light: #707070;
   --color_lighter: #909090;
-  --color_grey:#88898a;
+  --color_grey: #88898a;
   --color-light-grey: #ccc;
   --white: #fff;
   --black: #121212;
   --black-half: rgba(0, 0, 0, 0.5);
   --white-half: rgba(255, 255, 255, 0.5);
   --box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
-  --border: #E6E6E6;
-  --bg: #F5F5F5;
-  --green: #0BB783;
-  --red: #B00020;
-  --orange: #FFC400;
-  --border-radius:5px;
+  --border: #e6e6e6;
+  --bg: #f5f5f5;
+  --green: #0bb783;
+  --red: #b00020;
+  --orange: #ffc400;
+  --orange-dark: #d8aa40;
+  --border-radius: 5px;
 }
 
 // Site Bases
@@ -26,15 +27,13 @@ $sm: 480px;
 $md: 769px;
 $lg: 992px;
 $xl: 1170px;
-$xxl: 1440px;
+$xxl: 1360px;
+$xxxl: 1440px;
 
 // Site Font
 $font-regular: "TheSansArabic";
 $font-medium: "TheSansArabicSemi";
 $font-bold: "TheSansArabicBold";
-
-
-
 
 a {
   text-decoration: none;
@@ -66,7 +65,7 @@ a {
 
 ::placeholder {
   color: var(--color_grey) !important;
-  opacity: 1; /* Firefox */ 
+  opacity: 1; /* Firefox */
 }
 
 ::-ms-input-placeholder {
@@ -78,8 +77,8 @@ a {
   background: var(--white);
   color: var(--primary);
 }
-*:focus{
-  box-shadow:none !important;
+*:focus {
+  box-shadow: none !important;
 }
 body {
   font-family: $font-regular;
@@ -87,12 +86,32 @@ body {
   background-color: var(--white);
   line-height: 150%;
 }
-a,button{
+a,
+button {
   transition-duration: 0.3s !important;
 }
-.container{
-  max-width: 1440px;
+.container {
+  max-width: $xxxl;
   width: 100%;
+  @media (max-width: $xxxl) {
+    max-width: $xxl;
+  }
+  @media (max-width: $xxl) {
+    max-width: $xl;
+  }
+  @media (max-width: $xl) {
+    max-width: $lg;
+  }
+  @media (max-width: $lg) {
+    max-width: $md;
+  }
+  @media (max-width: $md) {
+    max-width: $sm;
+  }
+}
+.tooltip-inner {
+  background-color: var(--secondary);
+  color: lightcyan;
 }
 /* LTR specific styles */
 .ltr {

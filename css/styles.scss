@@ -4,13 +4,11 @@
 @import 'mixin';
 @import 'header';
 @import 'contents';
-
-// @import 'sidebar';
-// @import 'footer'; 
+@import 'footer'; 
 
 
 //components
-// @import 'components';
+ @import 'breadcrumb';
 
 //pages
 @import 'login';
