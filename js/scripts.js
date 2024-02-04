@@ -69,6 +69,9 @@ window.onload = function() {
       gridViewBtn.classList.add('active');
   });
  }
+
+
+ 
 // Tasks handle Events
 
 // When the DOM is fully loaded
@@ -88,7 +91,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.task-item').forEach(item => {
       item.classList.remove('active');
     });
-    document.querySelector(`[data-task-id="${taskId}"]`).classList.add('active');
+
+    if(document.querySelector(`[data-task-id="${taskId}"]`)){
+      document.querySelector(`[data-task-id="${taskId}"]`).classList.add('active');
+    }
+    
   }
   
   // Initialize the view with the first task's details

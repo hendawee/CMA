@@ -654,7 +654,7 @@
           display: block;
           top: 0px;
           position: absolute;
-          z-index: 1;
+          z-index: 1; 
           border-radius: 20px;
         }
       }
@@ -920,7 +920,8 @@
       background: #f5f5f5;
       position: relative;
       padding: 20px 20px;
-      border-bottom: 1px dashed #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
       .favorite-item {
         position: absolute;
         top: 15px;

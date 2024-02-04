@@ -1,0 +1,43 @@
+.requests-section {
+    margin: 30px 0;
+    .requests-filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .requests-tabs {
+            .nav {
+                gap: 20px;
+                li{
+                    .nav-link {
+                        border-radius: 10px;
+                        border: 1px solid #CCC;
+                        background: #FFF;
+                        color: #A7A9AC;
+                        text-align: right;
+                        font-family: TheSans;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        padding: 10px 20px;
+                        span {
+                            margin: 0 10px;
+                        }
+                        &.active {
+                            color: #004A98;
+                            text-align: right;
+                            font-family: TheSans;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            border-color: #004A98;
+                            border-width: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

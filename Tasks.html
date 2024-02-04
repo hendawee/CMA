@@ -12,7 +12,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/all.min.css" rel="stylesheet" />
+
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -141,189 +143,1030 @@
     <main class="main-contents">
         <!-- Start breadcrumb -->
         <div class="breadcrumb">
-           <div class="container">
-            <div class="title">
-               My Tasks
+            <div class="container">
+                <div class="title">
+                    My Tasks
+                </div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <i class="fa-solid fa-house"></i>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="hr.html">Human Resources</a></li>
+                        <li class="breadcrumb-item active"><a href="Tasks.html">My Tasks</a></li>
+                    </ol>
+                </nav>
             </div>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <i class="fa-solid fa-house"></i>
-                    <a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="hr.html">Human Resources</a></li>
-                  <li class="breadcrumb-item active"><a href="Tasks.html">My Tasks</a></li>
-                </ol>
-              </nav>
-           </div>
         </div>
 
         <!-- Tasks contents -->
         <div class="tasks-section">
             <div class="container">
-                    <!-- Filters Row -->
-                    <div class="row mb-3 tasks-filter">
-                      <div class="col">
+                <!-- Filters Row -->
+                <div class="row mb-3 tasks-filter">
+                    <div class="col">
                         <select class="form-select">
-                          <option selected>Task type</option>
-                          <option value="type1">Type 1</option>
-                          <option value="type2">Type 2</option>
-                          <!-- More options -->
+                            <option selected>Task type</option>
+                            <option value="type1">Type 1</option>
+                            <option value="type2">Type 2</option>
+                            <!-- More options -->
                         </select>
-                      </div>
-                      <div class="col">
+                    </div>
+                    <div class="col">
                         <select class="form-select">
-                          <option selected>Journeys</option>
-                          <option value="journey1">Journey 1</option>
-                          <option value="journey2">Journey 2</option>
-                          <!-- More options -->
+                            <option selected>Journeys</option>
+                            <option value="journey1">Journey 1</option>
+                            <option value="journey2">Journey 2</option>
+                            <!-- More options -->
                         </select>
-                      </div>
-                      <div class="col">
+                    </div>
+                    <div class="col">
                         <select class="form-select">
-                          <option selected>Due date</option>
-                          <option value="due1">Due 1</option>
-                          <option value="due2">Due 2</option>
-                          <!-- More options -->
+                            <option selected>Due date</option>
+                            <option value="due1">Due 1</option>
+                            <option value="due2">Due 2</option>
+                            <!-- More options -->
                         </select>
-                      </div>
-                      <div class="col">
+                    </div>
+                    <div class="col">
                         <select class="form-select">
-                          <option selected>Priority</option>
-                          <option value="high">High</option>
-                          <option value="medium">Medium</option>
-                          <option value="low">Low</option>
+                            <option selected>Priority</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
                         </select>
-                      </div>
-                      <div class="col">
+                    </div>
+                    <div class="col">
                         <select class="form-select">
-                          <option selected>Created</option>
-                          <option value="newest">Newest</option>
-                          <option value="oldest">Oldest</option>
-                          <!-- More options -->
+                            <option selected>Created</option>
+                            <option value="newest">Newest</option>
+                            <option value="oldest">Oldest</option>
+                            <!-- More options -->
                         </select>
-                      </div>
-                      <div class="filter-btn col-auto">
+                    </div>
+                    <div class="filter-btn col-auto">
                         <button>
-                           <img src="images/img/filter-btn.svg" alt="">
+                            <img src="images/img/filter-btn.svg" alt="">
                             All Filters</button>
-                      </div>
                     </div>
+                </div>
 
-                    
-       <div class="tasks-contents">
-        <div class="container">
-            <div class="row">
-                <!-- Left Column for the Tabs and Items -->
-                <div class="col-md-3">
-                  <!-- Tab Navs -->
-                  <ul class="nav nav-underline tasks-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" data-bs-toggle="tab" href="#open-tasks">Open Tasks</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-bs-toggle="tab" href="#completed-tasks">Completed Tasks</a>
-                    </li>
-                  </ul>
-                  
-                  <!-- Tab Content -->
-                  <div class="tab-content ">
-                    <div class="tab-pane fade show active" id="open-tasks">
-                      <!-- List Group for Open Tasks -->
-                      <ul class="list-group list-group-flush">
-                        <!-- Task Items -->
-                        <li class="list-group-item ">
-                            <div class="task-date">
-                                <span class="task-indicator red"></span>
-                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+
+                <div class="tasks-contents">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Left Column for the Tabs and Items -->
+                            <div class="col-md-4">
+                                <!-- Tab Navs -->
+                                <ul class="nav nav-underline tasks-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#open-tasks">Open
+                                            Tasks</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#completed-tasks">Completed
+                                            Tasks</a>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab Content -->
+                                <div class="tab-content ">
+                                    <div class="tab-pane fade show active" id="open-tasks">
+                                        <!-- List Group for Open Tasks -->
+                                        <div class="bx-wrapper">
+                                            <!-- Task Items -->
+                                            <a href="#" data-task-id="1" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator red"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="2" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator orange"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="3" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="4" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="5" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="completed-tasks">
+                                        <div class="bx-wrapper">
+                                            <!-- Task Items -->
+                                            <a href="#" data-task-id="6" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="7" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="8" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="9" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                            <a href="#" data-task-id="10" class="list-group-item task-item ">
+                                                <div class="task-date">
+                                                    <span class="task-indicator green"></span>
+                                                    <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                                </div>
+                                                <div class="task-title">
+                                                    Analysis and development of personnel affairs manual services.
+                                                </div>
+                                                <div class="task-author">
+                                                    Abdullah bin Muhammad Al-Shehri
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="task-title task-item"  data-task-id="1">
-                                Analysis and development of personnel affairs manual services. 
+
+                            <!-- Right Column for the Detail View -->
+                            <div class="col-md-8 detail-view">
+                                <!-- Detail Section -->
+                                <div id="detail-section-1" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Analysis and development of personnel affairs manual services.
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_01" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_01" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Activity content goes here</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Detail Section -->
+                                <div id="detail-section-2" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Confirming the employee's return to work
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_02" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_02" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_02" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Confirming the employee's return to work</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_02" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Activity content goes here</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Detail Section -->
+                                <div id="detail-section-3" class="detail-section">
+                                    <!-- Your content for Task details -->
+
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Organizing a Personnel Affairs Department meetin
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_03" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_03" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_03" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Organizing a Personnel Affairs Department meetin</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_03" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Organizing a Personnel Affairs Department
+                                                            meeting</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Detail Section -->
+                                <div id="detail-section-4" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Appointing a replacement employee
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_04" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_04" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_04" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Appointing a replacement employee</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_04" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Appointing a replacement employee</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Detail Section -->
+                                <div id="detail-section-5" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Discussing the employee's annual leave
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_05" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_05" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_05" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Discussing the employee's annual leave</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_05" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Discussing the employee's annual leave</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Detail Section -->
+                                <div id="detail-section-6" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Discussing the employee's annual leave
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_06" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_06" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_06" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Discussing the employee's annual leave</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_06" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Discussing the employee's annual leave</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Detail Section -->
+                                <div id="detail-section-7" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Organizing a Personnel Affairs Department meetin
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_07" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_07" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_07" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Organizing a Personnel Affairs Department meetin</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_07" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Organizing a Personnel Affairs Department meetin</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Detail Section -->
+                                <div id="detail-section-8" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Discussing the employee's annual leave
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_08" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_08" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_08" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Discussing the employee's annual leave</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_08" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Discussing the employee's annual leave</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Detail Section -->
+                                <div id="detail-section-9" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Organizing a Personnel Affairs Department meetin
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_09" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_09" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_09" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Organizing a Personnel Affairs Department meetin</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_09" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Discussing the employee's annual leave</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- Detail Section -->
+                                <div id="detail-section-10" class="detail-section">
+                                    <!-- Your content for Task details -->
+                                    <div class="header">
+                                        <div class="header-info">
+                                            <div class="task-date">
+                                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
+                                            </div>
+                                            <div class="task-title">
+                                                Organizing a Personnel Affairs Department meeting
+                                            </div>
+                                            <div class="task-author">
+                                                Abdullah bin Muhammad Al-Shehri
+                                            </div>
+                                        </div>
+                                        <div class="header-action">
+                                            <button type="button" class="btn default">Delegate </button>
+                                        </div>
+                                    </div>
+                                    <div class="task-body">
+                                        <div class="container">
+                                            <ul class="nav nav-underline" id="detailTabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="details-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#details_10" type="button"
+                                                        role="tab" aria-controls="details"
+                                                        aria-selected="true">Details</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="activity-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#activity_10" type="button" role="tab"
+                                                        aria-controls="activity" aria-selected="false">Activity</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="detailTabContent">
+                                                <div class="tab-pane fade show active" id="details_10" role="tabpanel"
+                                                    aria-labelledby="details-tab">
+                                                    <br>
+                                                    <p>Organizing a Personnel Affairs Department meeting</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                    <br>
+                                                    <button type="button" class="btn green">Complete</button>
+                                                </div>
+                                                <div class="tab-pane fade" id="activity_10" role="tabpanel"
+                                                    aria-labelledby="activity-tab">
+                                                    <br>
+                                                    <h5>
+                                                        <strong>Organizing a Personnel Affairs Department meeting</strong>
+                                                    </h5>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Create a plan for the functional and team components of your new
+                                                        hire's onboarding. In the plan, you can assign the new hire a
+                                                        mentor and create to-dos for yourself, the mentor, or the
+                                                        employee.</p>
+                                                    <br>
+                                                    <p>Click on the Complete button to mark task as
+                                                        <strong>complete</strong>.</p>
+                                                    <br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
                             </div>
-                            <div class="task-author">
-                                Abdullah bin Muhammad Al-Shehri
-                            </div>
-                        </li>
-                        <li class="list-group-item" >
-                            <div class="task-date">
-                                <span class="task-indicator orange"></span>
-                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
-                            </div>
-                            <div class="task-title task-item" data-task-id="2">
-                                Analysis and development of personnel affairs manual services. 
-                            </div>
-                            <div class="task-author">
-                                Abdullah bin Muhammad Al-Shehri
-                            </div>
-                        </li>
-                        <li class="list-group-item task-item" data-task-id="3">
-                            <div class="task-date">
-                                <span class="task-indicator green"></span>
-                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
-                            </div>
-                            <div class="task-title">
-                                Analysis and development of personnel affairs manual services. 
-                            </div>
-                            <div class="task-author">
-                                Abdullah bin Muhammad Al-Shehri
-                            </div>
-                        </li>
-                        <li class="list-group-item task-item" data-task-id="4">
-                            <div class="task-date">
-                                <span class="task-indicator green"></span>
-                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
-                            </div>
-                            <div class="task-title">
-                                Analysis and development of personnel affairs manual services. 
-                            </div>
-                            <div class="task-author">
-                                Abdullah bin Muhammad Al-Shehri
-                            </div>
-                        </li>
-                        <li class="list-group-item task-item" data-task-id="5">
-                            <div class="task-date">
-                                <span class="task-indicator green"></span>
-                                <time datetime="2024-01-07 21:18:22">2024-01-07 21:18:22</time>
-                            </div>
-                            <div class="task-title">
-                                Analysis and development of personnel affairs manual services. 
-                            </div>
-                            <div class="task-author">
-                                Abdullah bin Muhammad Al-Shehri
-                            </div>
-                        </li>
-                        <!-- More tasks -->
-                      </ul>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="completed-tasks">
-                      <!-- Similar structure for completed tasks -->
-                    </div>
-                  </div>
                 </div>
-                
-                <!-- Right Column for the Detail View -->
-                <div class="col-md-9 detail-view">
-                  <!-- Detail Section -->
-                  <div id="detail-section-1" class="detail-section">
-                    <!-- Your content for Task 1 details -->
-                    <h3>Task 1 Details</h3>
-                    <p>Details about Task 1...</p>
-                    <!-- More details elements -->
-                  </div>
-                  <div id="detail-section-2" class="detail-section">
-                    <!-- Your content for Task 2 details -->
-                    <h3>Task 2 Details</h3>
-                    <p>Details about Task 2...</p>
-                    <!-- More details elements -->
-                  </div>
-                  <!-- More detail sections for other tasks -->
-                </div>
-              </div>
-        </div>
-       </div>
-            
+
             </div>
         </div>
-     </main>
+    </main>
     <!-- End Contents -->
 
     <!-- Footer -->
@@ -339,6 +1182,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/languages.js"></script>
     <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

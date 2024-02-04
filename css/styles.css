@@ -1344,7 +1344,8 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   background: #f5f5f5;
   position: relative;
   padding: 20px 20px;
-  border-bottom: 1px dashed #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 .main-contents .list-view .service-card .favorite-item {
   position: absolute;
@@ -1450,6 +1451,41 @@ div.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   content: var(--bs-breadcrumb-divider, ">") !important;
 }
 
+.btn.green {
+  border-radius: 5px;
+  background: rgba(75, 181, 67, 0.1);
+  color: #4BB543;
+  text-align: center;
+  font-family: TheSans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18.52px;
+  padding: 14px 30px;
+}
+.btn.green:hover {
+  background: #4BB543;
+  color: #fff;
+}
+
+.btn.default {
+  border-radius: 5px;
+  background: rgba(0, 74, 152, 0.1);
+  border: none;
+  color: #004A98;
+  text-align: center;
+  font-family: TheSans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18.52px;
+  padding: 14px 30px;
+}
+.btn.default:hover {
+  background: #004A98;
+  color: #fff;
+}
+
 .tasks-section {
   margin: 30px 0;
 }
@@ -1457,19 +1493,26 @@ div.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   padding-bottom: 20px;
   border-bottom: 1px dashed #B6B6B6;
 }
+@media (max-width: 992px) {
+  .tasks-section .tasks-filter {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .tasks-section .tasks-filter .form-select {
   border: 1px solid #CCCCCC;
   color: #707070;
   font-family: "TheSansArabicSemi";
   font-size: 18px;
   text-indent: 10px;
+  height: 50px;
 }
 .tasks-section .tasks-filter .filter-btn button {
   border-radius: 5px;
   background: #004b96;
   border: 0;
   outline: none;
-  padding: 8.5px 20px;
+  padding: 13px 20px;
   color: #fff;
   text-align: center;
   font-size: 18px;
@@ -1506,6 +1549,157 @@ div.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
 .tasks-section .tasks-contents .tasks-tabs li a.active {
   color: #004a98;
   border-color: #004a98;
+}
+.tasks-section .tasks-contents .tab-content .task-item {
+  padding: 25px;
+  border-bottom: 1px dashed #A7A9AC;
+}
+.tasks-section .tasks-contents .tab-content .task-item.active {
+  background: #FAFBFC;
+  color: #404040;
+}
+.tasks-section .tasks-contents .tab-content .task-item .task-date {
+  color: #707070;
+  font-family: "TheSansArabicBold";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tasks-section .tasks-contents .tab-content .task-item .task-date .task-indicator {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 10px;
+}
+.tasks-section .tasks-contents .tab-content .task-item .task-date .task-indicator.red {
+  background: rgba(176, 0, 32, 0.1);
+  border: 3px solid #B00020;
+}
+.tasks-section .tasks-contents .tab-content .task-item .task-date .task-indicator.orange {
+  border: 3px solid #d8aa40;
+  background: rgba(216, 170, 64, 0.1);
+}
+.tasks-section .tasks-contents .tab-content .task-item .task-date .task-indicator.green {
+  border: 3px solid #4bb543;
+  background: rgba(75, 181, 67, 0.1);
+}
+.tasks-section .tasks-contents .tab-content .task-item .task-title {
+  display: flex;
+  color: #404040;
+  font-family: "TheSansArabicBold";
+  font-size: 18px;
+  margin: 10px 0;
+}
+.tasks-section .tasks-contents .tab-content .task-item .task-author {
+  color: #909090;
+  font-family: "TheSansArabicSemi";
+  font-size: 14px;
+}
+.tasks-section .tasks-contents .tab-content .task-item:last-child {
+  border-bottom: 0px;
+}
+.tasks-section .tasks-contents .detail-view {
+  border-radius: 5px;
+  border: 1px solid #DBDFE9;
+  padding: 0;
+}
+.tasks-section .tasks-contents .detail-view .header {
+  padding: 20px 25px;
+  border-bottom: 1px dashed #A7A9AC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tasks-section .tasks-contents .detail-view .header .header-info .task-date {
+  color: #707070;
+  font-family: "TheSansArabicBold";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tasks-section .tasks-contents .detail-view .header .header-info .task-title {
+  display: flex;
+  color: #404040;
+  font-family: "TheSansArabicBold";
+  font-size: 18px;
+  margin: 10px 0;
+}
+.tasks-section .tasks-contents .detail-view .header .header-info .task-author {
+  color: #909090;
+  font-family: "TheSansArabicSemi";
+  font-size: 14px;
+}
+.tasks-section .tasks-contents .detail-view .task-body {
+  padding: 25px;
+  font-size: 18px;
+}
+.tasks-section .tasks-contents .detail-view .task-body ul#detailTabs {
+  gap: 0px 20px;
+  margin-bottom: 15px;
+}
+.tasks-section .tasks-contents .detail-view .task-body ul#detailTabs:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #DBDFE9;
+  top: -3px;
+  position: relative;
+  z-index: -1;
+}
+.tasks-section .tasks-contents .detail-view .task-body ul#detailTabs .nav-item button {
+  color: #404040;
+  text-align: center;
+  font-family: "TheSansArabicBold";
+  font-size: 18px;
+}
+.tasks-section .tasks-contents .detail-view .task-body ul#detailTabs .nav-item button.active {
+  color: #004A98;
+  border-bottom: 3px solid #004A98;
+}
+.tasks-section .tasks-contents .detail-view .task-body ul#detailTabs .nav-item button:hover {
+  border-bottom: 3px solid #ccc;
+}
+
+.requests-section {
+  margin: 30px 0;
+}
+.requests-section .requests-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.requests-section .requests-filter .requests-tabs .nav {
+  gap: 20px;
+}
+.requests-section .requests-filter .requests-tabs .nav li .nav-link {
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  color: #A7A9AC;
+  text-align: right;
+  font-family: TheSans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 10px 20px;
+}
+.requests-section .requests-filter .requests-tabs .nav li .nav-link span {
+  margin: 0 10px;
+}
+.requests-section .requests-filter .requests-tabs .nav li .nav-link.active {
+  color: #004A98;
+  text-align: right;
+  font-family: TheSans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-color: #004A98;
+  border-width: 2px;
 }
 
 .login {
