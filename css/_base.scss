@@ -109,6 +109,9 @@ button {
     max-width: $sm;
   }
 }
+.main-contents {
+  min-height: 700px;
+}
 .tooltip-inner {
   background-color: var(--secondary);
   color: lightcyan;

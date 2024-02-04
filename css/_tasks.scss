@@ -1,0 +1,62 @@
+
+.tasks-section {
+    margin: 30px 0;
+    .tasks-filter {
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #B6B6B6;
+        .form-select {
+            border: 1px solid #CCCCCC;
+            color: #707070;
+            font-family: 'TheSansArabicSemi';
+            font-size: 18px;
+            text-indent: 10px;
+        }
+        .filter-btn {
+          
+            button {
+                border-radius: 5px;
+                background: #004b96;
+                border: 0;
+                outline: none;
+                padding: 8.5px 20px;
+                color: #fff;
+                text-align: center;
+                font-size: 18px;
+                text-transform: capitalize;
+                transition: 0.3s;
+                display: flex;
+                align-items: center;
+                img{
+                    margin-right: 15px;
+                }
+                &:hover{
+                    background: #3498db;
+                }
+            }
+        }
+    }
+    .tasks-contents {
+        margin-top: 30px;
+        .tasks-tabs {
+            position: relative;
+            li {
+                width: 47%;
+                a {
+                    color: #909090;
+                    font-family: "TheSansArabicSemi";
+                    font-size: 20px;
+                    line-height: 100%;
+                    margin: 0;
+                    padding: 15px 0;
+                    text-transform: capitalize;
+                    border-bottom: 3px solid #ccc ;
+                    &.active 
+                    {
+                        color: #004a98 ;
+                        border-color: #004a98;
+                    }
+                }
+            }
+        }
+    }
+}

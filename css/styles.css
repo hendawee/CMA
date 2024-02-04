@@ -151,6 +151,10 @@ button {
   }
 }
 
+.main-contents {
+  min-height: 700px;
+}
+
 .tooltip-inner {
   background-color: var(--secondary);
   color: lightcyan;
@@ -331,7 +335,7 @@ header.header > .container .action-wrapper nav.top-navbar ul.navbar-nav .nav-ite
 header.header > .container .action-wrapper nav.top-navbar ul.navbar-nav .nav-item.user-panel .dropdown-menu-user {
   min-width: 280px;
   animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1, menu-sub-dropdown-animation-move-up 0.3s ease 1;
-  z-index: 1;
+  z-index: 9;
   position: absolute;
   border: none;
   inset-block-start: 0;
@@ -1070,6 +1074,17 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   width: 40%;
   padding: 0 80px;
 }
+@media (max-width: 1360px) {
+  .main-contents .sub-banner .banner .banner-info {
+    width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  .main-contents .sub-banner .banner .banner-info {
+    width: 100%;
+    padding: 0 40px;
+  }
+}
 .main-contents .sub-banner .banner .banner-info h2 {
   font-size: 32px;
   color: #fff;
@@ -1084,6 +1099,11 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   display: flex;
   padding: 10px 0 30px 0;
 }
+@media (max-width: 769px) {
+  .main-contents .dashbord-lists {
+    flex-direction: column;
+  }
+}
 .main-contents .dashbord-lists .dash-items {
   display: flex;
   flex-wrap: wrap;
@@ -1093,12 +1113,27 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   transition: max-height 0.5s ease-out;
   max-height: 200px;
 }
+@media (max-width: 769px) {
+  .main-contents .dashbord-lists .dash-items {
+    width: 100%;
+  }
+}
 .main-contents .dashbord-lists .dash-more {
   width: 10%;
 }
+@media (max-width: 992px) {
+  .main-contents .dashbord-lists .dash-more {
+    width: 15%;
+  }
+}
+@media (max-width: 769px) {
+  .main-contents .dashbord-lists .dash-more {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
 .main-contents .dashbord-lists a {
-  flex: 0 0 auto;
-  width: 13%;
+  width: 12%;
   border-radius: 12px;
   position: relative;
   justify-content: center;
@@ -1111,9 +1146,24 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   padding: 15px 0;
   border: 1px solid #e6e6e6;
   background: #fafbfc;
-  margin: 0 3px;
+  margin: 0 0.7%;
   text-align: center;
   height: 200px;
+}
+@media (max-width: 1170px) {
+  .main-contents .dashbord-lists a {
+    width: 14%;
+  }
+}
+@media (max-width: 992px) {
+  .main-contents .dashbord-lists a {
+    width: 17%;
+  }
+}
+@media (max-width: 769px) {
+  .main-contents .dashbord-lists a {
+    width: 47%;
+  }
 }
 .main-contents .dashbord-lists a.show-all {
   background: #004a98;
@@ -1163,10 +1213,21 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   border-bottom: 1px dashed #b6b6b6;
   padding-bottom: 20px;
 }
+@media (max-width: 769px) {
+  .main-contents .services-header-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 .main-contents .services-header-wrapper .search-services {
   position: relative;
   flex: 0 0 auto;
   width: 25%;
+}
+@media (max-width: 769px) {
+  .main-contents .services-header-wrapper .search-services {
+    width: 100%;
+  }
 }
 .main-contents .services-header-wrapper .search-services button {
   position: absolute;
@@ -1180,6 +1241,11 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 769px) {
+  .main-contents .services-header-wrapper .action-filter {
+    width: 100%;
+  }
 }
 .main-contents .services-header-wrapper .action-filter .view-btn {
   border: 1px solid #d5d9dd;
@@ -1216,6 +1282,16 @@ header.header .header-menu .navbar .navbar-nav > li > ul li:last-child a {
   border-radius: 12px;
   background: #f5f5f5;
   position: relative;
+}
+@media (max-width: 992px) {
+  .main-contents .card-view .service-card {
+    width: 49%;
+  }
+}
+@media (max-width: 769px) {
+  .main-contents .card-view .service-card {
+    width: 100%;
+  }
 }
 .main-contents .card-view .service-card .favorite-item {
   position: absolute;
@@ -1372,6 +1448,64 @@ div.breadcrumb li.breadcrumb-item.active a {
 }
 div.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   content: var(--bs-breadcrumb-divider, ">") !important;
+}
+
+.tasks-section {
+  margin: 30px 0;
+}
+.tasks-section .tasks-filter {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #B6B6B6;
+}
+.tasks-section .tasks-filter .form-select {
+  border: 1px solid #CCCCCC;
+  color: #707070;
+  font-family: "TheSansArabicSemi";
+  font-size: 18px;
+  text-indent: 10px;
+}
+.tasks-section .tasks-filter .filter-btn button {
+  border-radius: 5px;
+  background: #004b96;
+  border: 0;
+  outline: none;
+  padding: 8.5px 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+.tasks-section .tasks-filter .filter-btn button img {
+  margin-right: 15px;
+}
+.tasks-section .tasks-filter .filter-btn button:hover {
+  background: #3498db;
+}
+.tasks-section .tasks-contents {
+  margin-top: 30px;
+}
+.tasks-section .tasks-contents .tasks-tabs {
+  position: relative;
+}
+.tasks-section .tasks-contents .tasks-tabs li {
+  width: 47%;
+}
+.tasks-section .tasks-contents .tasks-tabs li a {
+  color: #909090;
+  font-family: "TheSansArabicSemi";
+  font-size: 20px;
+  line-height: 100%;
+  margin: 0;
+  padding: 15px 0;
+  text-transform: capitalize;
+  border-bottom: 3px solid #ccc;
+}
+.tasks-section .tasks-contents .tasks-tabs li a.active {
+  color: #004a98;
+  border-color: #004a98;
 }
 
 .login {

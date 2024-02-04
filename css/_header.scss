@@ -161,7 +161,7 @@ header.header {
                 min-width: 280px;
                 animation: menu-sub-dropdown-animation-fade-in 0.3s ease 1,
                   menu-sub-dropdown-animation-move-up 0.3s ease 1;
-                z-index: 1;
+                z-index: 9;
                 position: absolute;
                 border: none;
                 inset-block-start: 0;
