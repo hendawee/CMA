@@ -803,6 +803,10 @@
       @media (max-width: $md) {
         width: 100%;
       }
+      input {
+        border: 1px solid #D5D9DD;
+        background: #FAFBFC;
+      }
       button {
         position: absolute;
         top: 5px;
@@ -982,21 +986,21 @@
       right: 0;
       border: 1px dashed #ccc;
     }
-  }
-
-  .show-more button {
-    border: 0;
-    background: #004a98;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-family: $font-medium;
-    font-size: 18px;
-    position: relative;
-    z-index: 1;
-
-    &:hover {
-      background: #3498db;
+    button {
+      border: 0;
+      background: #004a98;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-family: $font-medium;
+      font-size: 18px;
+      position: relative;
+      z-index: 1;
+  
+      &:hover {
+        background: #3498db;
+      }
     }
   }
+
 }

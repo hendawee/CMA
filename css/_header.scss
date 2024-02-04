@@ -86,7 +86,7 @@ header.header {
                 color: #004a98;
                 text-align: center;
                 font-size: 22px;
-                line-height: 22px;
+                line-height: 30px;
                 &:hover {
                   background: var(--color-light-grey);
                 }
@@ -222,6 +222,13 @@ header.header {
             &:hover {
               background: rgba(255, 255, 255, 0.15);
             }
+            &.dropdown-toggle{
+              &::after {
+               position: relative;
+               margin: 0 8px;
+               top: 2px;
+              }
+            }
           }
           > ul {
             border-radius: 0;
@@ -230,12 +237,20 @@ header.header {
             background: #004a98;
             margin-top: 0px;
             border-top: 1px solid rgba(13, 110, 253, 0.25);
+            .rtl & {
+             right: 0;
+            }
             li {
               a {
                 color: #fff;
                 display: block;
                 border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
                 padding: 10px 40px;
+                .rtl & {
+                  text-align: right;
+                  padding: 10px 20px;
+                  font-size: 14px;
+                 }
                 &:hover {
                   color: #fff;
                   background: rgba(255, 255, 255, 0.2);

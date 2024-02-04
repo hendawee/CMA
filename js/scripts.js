@@ -110,3 +110,37 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+
+
+
+// Function to toggle or set language
+function toggleLanguage(lang) {
+
+  if (lang) {
+    setLanguage(lang);
+    // translatePageTo(lang);
+  } else {
+
+    var body = document.body;
+    var currentLang = body.getAttribute("lang") || 'en';
+    var newLang = currentLang === 'en' ? 'ar' : 'en';
+    setLanguage(newLang);
+    // translatePageTo(newLang);
+  }
+}
+
+// Function to set language
+function setLanguage(lang) {
+  if (lang === "ar") {
+    body.classList.remove("ltr");
+    body.classList.add("rtl");
+    body.setAttribute("lang", "ar");
+    localStorage.setItem("lang", "ar");
+  } else {
+    body.classList.remove("rtl");
+    body.classList.add("ltr");
+    body.setAttribute("lang", "en");
+    localStorage.setItem("lang", "en");
+  }
+}
