@@ -74,12 +74,12 @@ var body = document.body;
 
 // Function to toggle or set language
 function toggleLanguage(lang) {
-  // If a specific language is passed, use it
+
   if (lang) {
     setLanguage(lang);
     // translatePageTo(lang);
   } else {
-    // Otherwise, toggle based on current setting
+
     var currentLang = body.getAttribute("lang") || 'en';
     var newLang = currentLang === 'en' ? 'ar' : 'en';
     setLanguage(newLang);
